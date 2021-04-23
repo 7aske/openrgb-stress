@@ -1,0 +1,16 @@
+{
+  "name": "openrgb-stress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "openrgb-sdk": "^0.4.1",
+    "os-utils": "^0.0.14"
+  }
+}
