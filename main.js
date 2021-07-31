@@ -18,13 +18,16 @@ const doSetColor = async (id, colors) => {
 
 	const usage = await cpuUsage();
 
-	const absUsage = (usage * 255);
-	const stress = (0xFF - absUsage);
+	const absUsage = (usage * 0xFF);
+
+	const coef = 0x91
+
+	const stress = coef - (absUsage * (coef / 0xFF));
 
 	colors[0] = {
-		red: absUsage,
-		green: 0x00,
-		blue: stress,
+		red: 0xFF,
+		green: stress,
+		blue: 0x00,
 	};
 
 	try {
